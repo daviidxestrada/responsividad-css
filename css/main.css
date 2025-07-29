@@ -6,6 +6,12 @@
     -webkit-box-sizing: border-box;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
+
 .container,
 .cabecera,
 .navegacion,
@@ -18,8 +24,8 @@
 .galeria,
 .galeria > div{
     border: 1px solid black;
-    padding: 20px;
-    margin: 20px;
+    /* padding: 20px; 
+    margin: 20px;*/
 }
 
 .container{
@@ -27,6 +33,7 @@
     margin: 0px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .cabecera,
@@ -42,6 +49,17 @@
 .widget3{
     display: none;
     /* opacity: 0; */
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.galeria > * {
+    width: 100%;
 }
 
 /* ========================
@@ -61,7 +79,12 @@
         grid-column: 3 / -1;
         grid-row: 3 / 5;
     }
+
+.galeria > * {
+    width: calc(50% - 10px);
 }
+}
+
 
 
 /* ========================
@@ -75,6 +98,10 @@
     .publi{
         grid-column: 1 / 2;
     }
+
+    .galeria > * {
+    width: calc(33% - 10px);
+}
 }
 
 
